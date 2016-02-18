@@ -2,7 +2,12 @@ package ctec.view;
 
 import java.awt.Color;
 
-import java.swing.*;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.SpringLayout;
+
 import ctec.controller.RecursionController;
 
 /**
@@ -12,13 +17,13 @@ import ctec.controller.RecursionController;
 public class RecusionPanel extends JPanel
 {
 	private RecursionController baseController;
-	private SpringLayot baseLayout;
+	private SpringLayout baseLayout;
 	private JButton fibonacciButton;
-	private Jbutton factorialButton;
+	private JButton factorialButton;
 	private JTextField inputFeild;
-	prvate JTextArea resultsArea;
+	private JTextArea resultsArea;
 	
-	public  RecursionPanel(recursionController baseController)
+	public RecusionPanel(RecursionController baseController)
 	{
 		this.baseController = baseController;
 		baseLayout = new SpringLayout();
@@ -28,16 +33,22 @@ public class RecusionPanel extends JPanel
 		resultsArea = new JTextArea(10, 20);
 		
 		setupPanel();
-		setupLayout;
+		setupLayout();
 		setupListeners();
 	}
 	
+	private void setupListeners()
+	{
+		
+		
+	}
+
 	private void setupPanel()
 	{
 		this.setLayout(baseLayout);
 		this.add(fibonacciButton);
 		this.add(factorialButton);
-		this.add(inputField);
+		this.add(inputFeild);
 		this.add(resultsArea);
 		this.setBackground(Color.MAGENTA);
 		resultsArea.setWrapStyleWord(true);
@@ -45,4 +56,7 @@ public class RecusionPanel extends JPanel
 	}
 	
 	private void setupLayout()
+	{
+		
+	}
 }

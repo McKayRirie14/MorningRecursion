@@ -2,6 +2,8 @@ package ctec.view;
 
 import javax.swing.JFrame;
 
+import ctec.controller.RecursionController;
+
 /**
  *  * @author mrir2917
  *@version 0.x Feb 11, 2016
