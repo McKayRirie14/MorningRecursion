@@ -1,30 +1,36 @@
-package ctec.view;
+package recursion.ctec.view;
 
 import javax.swing.JFrame;
 
-import ctec.controller.RecursionController;
+import recursion.ctec.controller.RecursionController;
 
-/**
- *  * @author mrir2917
- *@version 0.x Feb 11, 2016
- */
-public class RecursionFrame extends JFrame 
+public class RecursionFrame extends JFrame
 {
-	private RecursionPanel basePanel;
 	private RecursionController baseController;
+	private RecursionPanel basePanel;
 	
 	public RecursionFrame(RecursionController baseController)
 	{
 		this.baseController = baseController;
 		basePanel = new RecursionPanel(baseController);
 		setupFrame();
+		
 	}
-	
+
 	private void setupFrame()
 	{
 		this.setContentPane(basePanel);
-		this.setTitle("Lets recurse");
-		this.setSize(500, 500);
+		this.setSize(400,400);
+		this.setTitle("Lets Recurse");
+		this.setResizable(false);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setVisible(true);
+		
 	}
+	
+	public RecursionController gatBaseController()
+	{
+		return baseController;
+	}
+	
 }

@@ -1,14 +1,9 @@
-package ctec.model;
+package recursion.ctec.model;
 
-public class RecursionTool
-/**
- * @author mrir2917 
- * @version 0.x Feb 11, 2016
- */
 public class RecursionTool
 {
 	
-	public double getFibNumber(double position)
+	public int getFibNumber(int position)
 	{
 		//Defensive code against user evilness
 		if(position < 0)
@@ -16,20 +11,18 @@ public class RecursionTool
 			return Integer.MIN_VALUE;
 		}
 		
-		//Base Case
-		if(position == 0 || position == 1)
+		if(position == 0 || position == 1) //Base Case
 		{
 			return 1;
 		}
-		else // Recursive case - We must keep calling the method.
+		else //Recursive Case -- Keeps calling the method
 		{
-			return getFibNumber(position - 1) + getfibNumber(position - 2);
+			return getFibNumber(position - 1) + getFibNumber(position - 2);
 		}
 	}
 	
-	public int getFacorialNumber(double position)
+	public double getFactorialNumber(double position)
 	{
-		//Defensive code against user evilness
 		if(position < 0)
 		{
 			return Integer.MIN_VALUE;
@@ -39,12 +32,9 @@ public class RecursionTool
 		{
 			return 1;
 		}
-		else
+		else 
 		{
 			return position * getFactorialNumber(position - 1);
 		}
-		
-	
 	}
-	
 }
